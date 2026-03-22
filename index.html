@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fanatics State Market Operating Framework</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-lockup">
+        <img
+          class="brand-logo"
+          src="https://images.squarespace-cdn.com/content/v1/5ff494b9931735466ce28d5b/082e5637-261a-49fc-99b1-722e44d27981/Fanatics_Logo_Media.png"
+          alt="Fanatics logo"
+        />
+        <div class="brand-titles">
+          <p class="brand-overline">Fanatics Betting &amp; Gaming</p>
+          <h1>State Market Operating Framework</h1>
+        </div>
+      </div>
+      <p class="topbar-note">MEDIA PLANNING PROTOTYPE • 51 JURISDICTIONS • BUDGET DECISIONS SIT WITH CHRISTJAN'S COMMERCIAL MODEL</p>
+    </header>
+
+    <nav class="anchor-nav">
+      <a href="#filtersTable">Filters &amp; Table</a>
+      <a href="#competitiveIntel">Competitive Intel</a>
+      <a href="#recommendedActions">Review Watchlist</a>
+    </nav>
+
+    <section class="mandate-banner">
+      <p>⚠ This tool centralizes media planning decisions only — where to play, what to test, and how to measure.</p>
+      <p>It does not set budgets, CAC targets, or promo levels. All financial sizing belongs in Christjan's commercial model.</p>
+    </section>
+
+    <section class="print-header">
+      <div class="print-brand">
+        <img
+          class="brand-logo"
+          src="https://images.squarespace-cdn.com/content/v1/5ff494b9931735466ce28d5b/082e5637-261a-49fc-99b1-722e44d27981/Fanatics_Logo_Media.png"
+          alt="Fanatics logo"
+        />
+        <div>
+          <p class="brand-overline">Fanatics Betting &amp; Gaming</p>
+          <h1>State Market Operating Framework</h1>
+        </div>
+      </div>
+      <p class="print-date">Date Last Updated: <strong id="printLastUpdatedDate">—</strong></p>
+      <p id="printFilterSummary" class="print-filter-summary"></p>
+    </section>
+
+    <section class="card intro-card">
+      <div class="intro-layout">
+        <div class="intro-copy">
+          <p class="section-eyebrow">Prototype Planning Lens</p>
+          <h2>This is a working prototype to centralize state-level media planning decisions.</h2>
+          <p class="intro-lede">It is not a budget tool. It is a media planning lens to:</p>
+        </div>
+        <div class="intro-data">
+          <div class="intro-data-point">
+            <span>Date Last Updated</span>
+            <strong id="lastUpdatedDate">—</strong>
+          </div>
+        </div>
+      </div>
+
+      <ul class="intro-list">
+        <li>see tax and licensing constraints at a glance,</li>
+        <li>identify where attribution continuity is at risk as PMG transitions out, and</li>
+        <li>pick sensible candidates for MMM and incrementality testing.</li>
+      </ul>
+
+      <div class="strategy-callout">Prototype / planning lens only. Use this to decide WHERE to play, WHAT to test, and HOW to measure — then hand off to Christjan&rsquo;s commercial model for all budget sizing.</div>
+
+      <details class="details-card helper-card" open>
+        <summary>How to use this view</summary>
+        <div class="details-body">
+          <ul>
+            <li>Filter by tax and licensing to understand the economic and access constraints.</li>
+            <li>Use the attribution continuity and measurement suitability tags to decide where to maintain stability vs. where to run geo-holdouts / MMM calibration.</li>
+            <li>Use presets to quickly pull watchlists: high-tax / high-handle markets, launch-ready test beds, and measurement calibration states.</li>
+          </ul>
+        </div>
+      </details>
+
+      <section class="card framing-card">
+        <div class="section-heading simple">
+          <div>
+            <p class="section-eyebrow">Planning Guardrails</p>
+            <h3>What this tool is and isn&rsquo;t</h3>
+          </div>
+        </div>
+        <div class="framing-grid">
+          <article class="framing-column is-column">
+            <h4>Is</h4>
+            <ul>
+              <li>✓ State selection and eligibility mapping</li>
+              <li>✓ Measurement risk and attribution continuity signals</li>
+              <li>✓ Geo-holdout and MMM test design candidates</li>
+              <li>✓ Competitive channel mix context</li>
+              <li>✓ Discussion queue for experiment design reviews</li>
+            </ul>
+          </article>
+          <article class="framing-column isnt-column">
+            <h4>Is Not</h4>
+            <ul>
+              <li>✗ A budget allocation model</li>
+              <li>✗ A CAC or LTV calculator</li>
+              <li>✗ A promo-level decision tool</li>
+              <li>✗ A replacement for Christjan&rsquo;s commercial model</li>
+              <li>✗ A hard recommendation for immediate spend changes</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <main class="layout" id="filtersTable">
+      <aside class="filters card">
+        <div class="panel-heading">
+          <p class="section-eyebrow">Filters</p>
+          <h2>Market filters</h2>
+        </div>
+        <p class="filter-help">Start with where we can operate, then pressure-test the rough economics and where measurement is safer or riskier.</p>
+
+        <label class="field">
+          <span>State</span>
+          <select id="search">
+            <option value="">All states</option>
+          </select>
+        </label>
+
+        <section class="filter-group">
+          <div class="filter-group-head">
+            <p class="section-eyebrow">Eligibility &amp; Access</p>
+            <p class="filter-group-copy">Use this group to answer where we can operate and how structurally constrained access is.</p>
+          </div>
+
+          <label class="field">
+            <span>Sports betting</span>
+            <select id="sportsStatus">
+              <option value="all">All</option>
+              <option value="legal">Legal</option>
+              <option value="illegal">Illegal</option>
+              <option value="limited">Limited</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>iGaming</span>
+            <select id="igamingStatus">
+              <option value="all">All</option>
+              <option value="yes">Live</option>
+              <option value="pending">Pending</option>
+              <option value="no">Not legal</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Licensing model</span>
+            <select id="licensingModel">
+              <option value="all">All</option>
+              <option value="Open commercial">Open commercial</option>
+              <option value="Casino-tethered">Casino-tethered</option>
+              <option value="Tribal exclusive">Tribal exclusive</option>
+              <option value="State monopoly">State monopoly</option>
+              <option value="Not yet authorized">Not yet authorized</option>
+            </select>
+          </label>
+        </section>
+
+        <section class="filter-group">
+          <div class="filter-group-head">
+            <p class="section-eyebrow">Economics &amp; Tax</p>
+            <p class="filter-group-copy">Use this group to get a quick directional read on market economics rather than a full P&amp;L.</p>
+          </div>
+
+          <label class="field">
+            <span>Tax band</span>
+            <select id="taxBand">
+              <option value="all">All</option>
+              <option value="Low">Low (&lt;10%)</option>
+              <option value="Mid">Mid (10–20%)</option>
+              <option value="High">High (20–35%)</option>
+              <option value="Extreme">Extreme (35%+)</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Handle tier</span>
+            <select id="handleTier">
+              <option value="all">All</option>
+              <option value="Mega">Mega</option>
+              <option value="Major">Major</option>
+              <option value="Mid">Mid</option>
+              <option value="Small">Small / pre-launch</option>
+            </select>
+          </label>
+        </section>
+
+        <section class="filter-group">
+          <div class="filter-group-head">
+            <p class="section-eyebrow">Measurement Suitability</p>
+            <p class="filter-group-copy">Use this group to separate safer testing states from markets where attribution or operational risk is too high.</p>
+          </div>
+
+          <label class="field">
+            <span>Good candidates for geo-holdouts / MMM calibration</span>
+            <select id="measurementCandidate">
+              <option value="all">All</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>High attribution drift risk</span>
+            <select id="highAttributionRisk">
+              <option value="all">All</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </label>
+        </section>
+
+        <div class="quick-presets">
+          <span>Operating views</span>
+          <div class="preset-grid">
+            <button data-preset="governance-watchlist">High-tax, high-handle markets — flag for commercial review</button>
+            <button data-preset="launch-ready-tests">Launch-ready markets — media test candidates</button>
+            <button data-preset="continuity-risk">Attribution continuity risk — sense-check measurement approach</button>
+            <button data-preset="geo-holdout">Prime geo-holdout candidates — MMM calibration priority</button>
+          </div>
+          <p id="presetNarrative" class="preset-narrative">Select an operating view to load a focused market slice.</p>
+        </div>
+
+        <div class="action-row">
+          <button id="resetBtn" class="ghost">Reset</button>
+          <button id="copyBtn">Copy view summary</button>
+          <button id="copyTableBtn">Copy table</button>
+          <button id="downloadBtn">Download XLSX</button>
+        </div>
+      </aside>
+
+      <section class="results">
+        <section class="kpi-section" aria-label="Decision summary">
+          <p id="kpiNarrative" class="kpi-narrative"></p>
+          <div class="kpis">
+            <article class="card kpi">
+              <p>% of current media budget in high-tax markets</p>
+              <h3 id="highTaxBudgetShare">—</h3>
+              <small id="highTaxBudgetShareMeta">Directional proxy only</small>
+              <em class="kpi-qualifier">Directional signal only — budget sizing belongs in commercial model.</em>
+            </article>
+            <article class="card kpi">
+              <p># of markets with negative contribution at current CAC/promo assumptions</p>
+              <h3 id="negativeContributionCount">—</h3>
+              <small id="negativeContributionMeta">Placeholder until CAC / promo assumptions are connected</small>
+              <em class="kpi-qualifier">Placeholder until tied into Christjan's commercial model.</em>
+            </article>
+            <article class="card kpi">
+              <p># of markets flagged as &ldquo;measurement calibration states&rdquo;</p>
+              <h3 id="measurementCalibrationCount">—</h3>
+              <small id="measurementCalibrationMeta">Safe for geo-holdouts / testing based on static tags</small>
+              <em class="kpi-qualifier">Use to prioritize geo-holdout and MMM design — not to allocate spend.</em>
+            </article>
+            <article class="card kpi">
+              <p># of markets flagged as &ldquo;attribution continuity risk&rdquo;</p>
+              <h3 id="attributionRiskCount">—</h3>
+              <small id="attributionRiskMeta">States most exposed to methodology drift during handoff</small>
+              <em class="kpi-qualifier">Measurement planning signal — validate with attribution and MMM leads.</em>
+            </article>
+          </div>
+        </section>
+
+        <article class="card table-card">
+          <div class="table-head">
+            <div class="section-heading">
+              <div>
+                <p class="section-eyebrow">Planning View</p>
+                <h2>State market view</h2>
+              </div>
+              <p id="activeFilterText">All jurisdictions in view.</p>
+            </div>
+            <p id="majorPolicyCallout" class="major-policy-callout"></p>
+            <div id="activeFilterChips" class="active-filter-chips"></div>
+            <div class="table-controls">
+              <div class="column-toggle-bar">
+                <p class="column-toggle-label">Columns</p>
+                <div id="columnToggleMenu" class="column-toggle-menu"></div>
+              </div>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr id="tableHeaderRow"></tr>
+              </thead>
+              <tbody id="stateRows"></tbody>
+              <tfoot>
+                <tr id="tableSummaryRow" class="table-summary-row"></tr>
+              </tfoot>
+            </table>
+          </div>
+          <div class="table-footnotes">
+            <p class="table-footnote"><strong>Attribution continuity risk:</strong> static planning tag only. &ldquo;High&rdquo; means a scaled market where methodology drift during PMG to in-house transition would matter most.</p>
+            <p class="table-footnote"><strong>Measurement suitability:</strong> static planning tag used to distinguish prime geo-holdout states, MMM-only anchors, and markets where testing should be avoided.</p>
+          </div>
+        </article>
+
+        <section class="card competitive-card" id="competitiveIntel">
+          <div class="competitive-head">
+            <div>
+              <p class="section-eyebrow">Competitive Intel</p>
+              <h3>Competitive market intelligence</h3>
+              <p class="competitive-subtitle">Trimmed to short labels that directly change how media would likely be deployed in a given state.</p>
+            </div>
+            <button id="toggleCompetitiveBtn" class="ghost competitive-toggle" type="button" aria-expanded="true">▾ Hide competitive intel</button>
+          </div>
+
+          <div id="competitiveBody">
+            <div class="brief-controls competitive-controls">
+              <label for="competitiveStateSelect">State</label>
+              <select id="competitiveStateSelect"></select>
+            </div>
+
+            <div class="competitive-panel">
+              <section class="competitive-grid">
+                <article class="competitive-block">
+                  <h4>Known promo intensity</h4>
+                  <p id="competitivePromoIntensity"></p>
+                  <p class="competitive-footnote">Compressed read on how hard public promo pressure appears to be in this market.</p>
+                </article>
+                <article class="competitive-block">
+                  <h4>Dominant competitor model</h4>
+                  <p id="dominantCompetitorModel"></p>
+                  <p class="competitive-footnote">Read as the competitor channel model most likely to change how we deploy media here.</p>
+                </article>
+              </section>
+
+              <section class="competitive-block">
+                <h4>Why it matters for media</h4>
+                <p id="competitiveDeploymentNote"></p>
+                <p id="competitiveVerified" class="competitive-footnote"></p>
+              </section>
+
+              <section class="competitive-block">
+                <h4>Channel mix implication</h4>
+                <p id="channelMixImplication"></p>
+              </section>
+
+              <section class="competitive-block">
+                <h4>Reference sources</h4>
+                <p id="competitiveSources" class="competitive-sources"></p>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section class="card action-card" id="recommendedActions">
+          <div class="section-heading simple">
+            <div>
+              <p class="section-eyebrow">Review Queue</p>
+              <h3>Current review watchlist</h3>
+            </div>
+          </div>
+          <p id="actionSummary" class="action-summary"></p>
+          <div id="actionShortlist" class="action-grid"></div>
+          <p class="action-footnote">Use this as a budget-review and experiment-design queue, not as a hard recommendation for immediate budget allocation.</p>
+
+          <section class="card handoff-card">
+            <div class="section-heading simple">
+              <div>
+                <p class="section-eyebrow">Export</p>
+                <h3>Export: Commercial Model Handoff</h3>
+              </div>
+            </div>
+            <label class="field">
+              <span>Handoff summary</span>
+              <textarea id="handoffSummary" class="handoff-summary" readonly></textarea>
+            </label>
+            <label class="field">
+              <span>Notes to Christjan / commercial team:</span>
+              <textarea id="handoffNotes" placeholder="Add planning assumptions, risks, or open questions here."></textarea>
+            </label>
+            <div class="handoff-checklist">
+              <label><input type="checkbox" id="handoffChannelCheck" /> <span>Sense-checked with channel leads</span></label>
+              <label><input type="checkbox" id="handoffMeasurementCheck" /> <span>Aligned with attribution / MMM team</span></label>
+              <label><input type="checkbox" id="handoffRiskCheck" /> <span>Key risks and assumptions flagged</span></label>
+            </div>
+            <button id="copyHandoffBtn" class="ghost">Copy handoff summary</button>
+          </section>
+        </section>
+
+        <section class="card briefs-card" id="stateBriefs">
+          <details class="details-card">
+            <summary>State brief</summary>
+            <div class="details-body">
+              <div class="brief-controls">
+                <label for="stateBriefSelect">State</label>
+                <select id="stateBriefSelect"></select>
+              </div>
+              <div class="brief-content">
+                <p id="briefSnapshot"></p>
+                <p id="briefUpdate"></p>
+                <p id="briefWhy"></p>
+                <div class="brief-extra">
+                  <p class="inline-brief-label">Exec narrative angle</p>
+                  <p id="briefExecNarrative" class="exec-narrative-text"></p>
+                </div>
+                <ul id="briefLinks"></ul>
+              </div>
+            </div>
+          </details>
+        </section>
+
+        <section class="card glossary-card" id="referenceNotes">
+          <details class="details-card">
+            <summary>Reference notes</summary>
+            <div class="details-body">
+              <div class="reference-field">
+                <p class="inline-brief-label">Exec narrative angle</p>
+                <p class="exec-narrative-text">Sportsbook president: Frame as: performance efficiency and market share protection.
+Casino president: Frame as: performance ROI and iGaming expansion opportunity.
+CMO: Frame as: brand building, fan ecosystem, and story.
+Default: Tailor framing to audience — planning signals are the same regardless.</p>
+              </div>
+              <ul>
+                <li><strong>Licensing model:</strong> simplified operating-access tag used to separate open markets from casino-tethered, tribal, and monopoly structures.</li>
+                <li><strong>Tax band:</strong> low &lt;10%, mid 10–20%, high 20–35%, extreme 35%+.</li>
+                <li><strong>Attribution continuity risk:</strong> static planning label for where PMG to in-house methodology drift could be most material.</li>
+                <li><strong>Measurement suitability:</strong> static planning label for whether a state is prime for geo-holdouts, better suited only for MMM calibration, or should be avoided for testing.</li>
+                <li><strong>Competitive labels:</strong> compressed to promo intensity and dominant competitor model so the intel stays tied to media deployment decisions.</li>
+              </ul>
+              <p class="caveat">This tool is a prototype planning interface, not a replacement for commercial modeling. Validate statutory rates, market access, and operating assumptions before decisions.</p>
+            </div>
+          </details>
+        </section>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>This tool is a media planning prototype only. It centralizes state-level planning decisions — where to play, what to test, and how to measure. It does not set budgets, CAC targets, promo levels, or financial assumptions. All budget decisions are owned by Christjan and the commercial modeling function. Last updated: <strong id="footerLastUpdatedDate">—</strong>.</p>
+    </footer>
+
+    <div id="copyToast" class="copy-toast" role="status" aria-live="polite"></div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
