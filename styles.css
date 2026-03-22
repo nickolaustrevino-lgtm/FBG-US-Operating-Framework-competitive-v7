@@ -2235,3 +2235,77 @@ tbody tr {
 .framing-column h4 {
   font-weight: 600;
 }
+
+
+/* Codex final visual corrections */
+.anchor-nav a {
+  color: #9ca3af !important;
+  font-weight: 500;
+}
+
+.anchor-nav a.is-active,
+.anchor-nav a[aria-current="page"] {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border-bottom-color: var(--accent-primary) !important;
+}
+
+.filters .field > span {
+  font-size: var(--text-label);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.framing-column h4 {
+  font-size: var(--text-sub) !important;
+  font-weight: 500 !important;
+}
+
+.competitive-block h4 {
+  font-size: var(--text-sub) !important;
+  font-weight: 600 !important;
+}
+
+.kpi {
+  display: grid;
+  grid-template-rows: minmax(72px, auto) auto minmax(44px, auto) auto;
+  align-items: start;
+}
+
+.kpi p {
+  min-height: 72px;
+}
+
+.kpi h3 {
+  margin-top: 0;
+  align-self: end;
+}
+
+.major-policy-callout {
+  background: #1c1100;
+  color: #fbbf24 !important;
+}
+
+.handoff-card .section-eyebrow {
+  color: var(--accent-positive) !important;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid var(--border-neutral) !important;
+  background-color: var(--surface-card) !important;
+  box-shadow: none !important;
+  padding-right: 36px;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #94a3b8 50%),
+    linear-gradient(135deg, #94a3b8 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 2px),
+    calc(100% - 13px) calc(50% - 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
