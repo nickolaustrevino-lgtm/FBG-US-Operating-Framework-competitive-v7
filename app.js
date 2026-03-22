@@ -56,7 +56,8 @@ const elements = {
   handoffMeasurementCheck: document.getElementById("handoffMeasurementCheck"),
   handoffRiskCheck: document.getElementById("handoffRiskCheck"),
   copyHandoffBtn: document.getElementById("copyHandoffBtn"),
-  footerLastUpdatedDate: document.getElementById("footerLastUpdatedDate")
+  footerLastUpdatedDate: document.getElementById("footerLastUpdatedDate"),
+  anchorTabs: document.querySelectorAll(".anchor-nav a")
 };
 
 const defaultFilters = {
@@ -1581,7 +1582,44 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+function updateAnchorNavActive() {
+  const sections = [
+    { id: "filtersTable", href: "#filtersTable" },
+    { id: "competitiveIntel", href: "#competitiveIntel" },
+    { id: "recommendedActions", href: "#recommendedActions" }
+  ];
+  const hashId = window.location.hash ? window.location.hash.slice(1) : "";
+  const scrollPosition = window.scrollY + 180;
+
+  let activeId = sections[0].id;
+  if (hashId && sections.some((section) => section.id === hashId)) {
+    activeId = hashId;
+  } else {
+    sections.forEach((section) => {
+      const node = document.getElementById(section.id);
+      if (node && node.offsetTop <= scrollPosition) activeId = section.id;
+    });
+  }
+
+  elements.anchorTabs.forEach((link) => {
+    const isActive = link.getAttribute("href") === `#${activeId}`;
+    link.classList.toggle("is-active", isActive);
+    if (isActive) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
+  });
+}
+
+function initializeAnchorNav() {
+  updateAnchorNavActive();
+  window.addEventListener("scroll", updateAnchorNavActive, { passive: true });
+  window.addEventListener("hashchange", updateAnchorNavActive);
+  elements.anchorTabs.forEach((link) => {
+    link.addEventListener("click", () => window.setTimeout(updateAnchorNavActive, 0));
+  });
+}
+
 updateLastUpdatedDisplay();
+initializeAnchorNav();
 
 stateData
   .map((row) => row.state)
